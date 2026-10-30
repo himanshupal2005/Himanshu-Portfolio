@@ -308,7 +308,7 @@ function ProjectCard({ project, index, onOpen }) {
 function Projects() {
   const [filter, setFilter] = useState("All");
   const [selected, setSelected] = useState(null);
-  const categories = ["All", "AI AUTOMATION", "ERP ENGINEERING", "DATA ANALYTICS", "COMPUTER VISION", "PRODUCT / POS", "HACKATHON PROTOTYPE"];
+  const categories = ["All", "AI AUTOMATION", "ERP ENGINEERING", "PRODUCT / POS", "COMPUTER VISION"];
   const filtered = filter === "All" ? projects : projects.filter(p => p.category === filter);
   useEffect(() => {
     if (!selected) return;

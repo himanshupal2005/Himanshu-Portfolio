@@ -56,35 +56,6 @@ export const projects = [
       "Mapped gestures to cursor movement and actions.",
       "Explored accessible, touch-free interaction patterns."
     ]
-  },
-  {
-    id: "05",
-    category: "DATA ANALYTICS",
-    title: "Job trends & market analytics",
-    summary: "A data analysis project exploring LinkedIn job trends using web scraping and structured market analysis.",
-    impact: "From raw listings to insights",
-    stack: ["Python", "SQL", "Data cleaning", "Visualization"],
-    visual: "analytics",
-    details: [
-      "Collected and structured job-market data.",
-      "Cleaned data to make roles and skills easier to compare.",
-      "Used analysis to identify patterns in job demand."
-    ]
-  },
-  {
-    id: "06",
-    category: "HACKATHON PROTOTYPE",
-    title: "Doc’s Eye",
-    summary: "A healthcare-themed hackathon prototype developed by a team in 24 hours at Navonmesh 2026.",
-    impact: "Built in a 24-hour sprint",
-    stack: ["Prototype", "Conversational UX", "Health tracking"],
-    visual: "docs",
-    details: [
-      "Explored medical-report scanning with general informational guidance.",
-      "Proposed a conversational support experience and body-activity tracking.",
-      "The original project files were lost after a malware incident; this is a retrospective case study, not a live service."
-    ],
-    note: "Prototype only. Not medical advice, not a deployed medical product."
   }
 ];
 
