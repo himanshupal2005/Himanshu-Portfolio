@@ -10,6 +10,7 @@ import {
   Download, ExternalLink, Github, Linkedin, Mail, Menu, MousePointer2,
   MoveUpRight, Play, Sparkles, X, Zap
 } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 import { projects, experience, skills, awards, certifications } from "./data";
 
 gsap.registerPlugin(ScrollTrigger);
