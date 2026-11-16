@@ -9,6 +9,7 @@ import {
   Download, ExternalLink, Github, Linkedin, Mail, Menu, MousePointer2,
   MoveUpRight, Play, Sparkles, X, Zap
 } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 import { projects, experience, skills, awards, certifications } from "./data";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -604,6 +605,7 @@ export default function App() {
       <Footer />
       <ScrollEffects />
       <div className={`custom-cursor ${cursor.visible ? "visible" : ""}`} style={{ left: cursor.x, top: cursor.y }} aria-hidden="true"><span /></div>
+      <Analytics />
     </>
   );
 }
