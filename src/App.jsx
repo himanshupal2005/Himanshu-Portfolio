@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -604,6 +605,7 @@ export default function App() {
       <Footer />
       <ScrollEffects />
       <div className={`custom-cursor ${cursor.visible ? "visible" : ""}`} style={{ left: cursor.x, top: cursor.y }} aria-hidden="true"><span /></div>
+      <Analytics />
     </>
   );
 }
