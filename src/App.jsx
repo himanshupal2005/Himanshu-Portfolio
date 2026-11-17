@@ -95,7 +95,7 @@ function Navbar({ active, progress }) {
         <nav className="nav-links" aria-label="Main navigation">
           {links.map(([id, label]) => <a key={id} href={`#${id}`} className={active === id ? "active" : ""}>{label}</a>)}
         </nav>
-        <a href="/resume.pdf" className="nav-resume" target="_blank" rel="noreferrer">View résumé <Download size={14} /></a>
+        <a href="/resume.html" className="nav-resume" target="_blank" rel="noreferrer">View résumé <Download size={14} /></a>
         <a href={`mailto:${EMAIL}`} className="nav-cta">Let’s talk <ArrowUpRight size={14} /></a>
         <button
           className="mobile-menu-button"
@@ -136,7 +136,7 @@ function Navbar({ active, progress }) {
                     <ArrowUpRight size={16} />
                   </a>
                 ))}
-                <a href="/resume.pdf" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}><span>View résumé</span><Download size={16} /></a>
+                <a href="/resume.html" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}><span>View résumé</span><Download size={16} /></a>
                 <a href={`mailto:${EMAIL}`} onClick={() => setMenuOpen(false)} className="mobile-menu-email">
                   <span>Contact ({EMAIL})</span>
                   <Mail size={16} />
@@ -192,7 +192,7 @@ function Hero() {
         </motion.p>
         <motion.div className="hero-actions" initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.85 }}>
           <a href="#work" className="button button-primary">Explore my work <ArrowDownRight size={16} /></a>
-          <a href="/resume.pdf" target="_blank" rel="noreferrer" className="button button-quiet">View résumé <Download size={16} /></a>
+          <a href="/resume.html" target="_blank" rel="noreferrer" className="button button-quiet">View résumé <Download size={16} /></a>
         </motion.div>
         <motion.div className="hero-footnote" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.05 }}>
           <span>BMS · BUSINESS ANALYTICS & FINANCE</span><span className="footnote-line" /><span>BASED IN BHOPAL, INDIA</span>
@@ -278,7 +278,7 @@ function ProjectArtwork({ type }) {
   if (type === "cars24") return (
     <div className="artwork artwork-cars24">
       <div className="business-art-header"><div><small>POWER BI / CARS24 DATASET</small><strong>Used-car market overview</strong></div><span>DEMO VIEW</span></div>
-      <div className="business-art-kpis"><div><small>LISTINGS</small><b>1,248</b></div><div><small>AVG. PRICE</small><b>₹ 6.8L</b></div><div><small>AVG. KM</small><b>42K</b></div></div>
+      <div className="business-art-kpis"><div><small>SOURCE</small><b>Cars24</b></div><div><small>PREP</small><b>Cleaned</b></div><div><small>OUTPUT</small><b>Power BI</b></div></div>
       <div className="cars24-chart"><div className="cars24-chart-title">PRICE DISTRIBUTION <span>ILLUSTRATIVE VALUES</span></div><div className="cars24-bars">{[42,68,54,84,62,93,73,48,66,80].map((v,i)=><i key={i} style={{height:v+"%"}} />)}</div></div>
       <div className="cars24-footer"><span>POWER QUERY · DATA CLEANING</span><span>POWER BI REPORT</span></div>
     </div>
@@ -286,7 +286,7 @@ function ProjectArtwork({ type }) {
   if (type === "excel") return (
     <div className="artwork artwork-excel">
       <div className="business-art-header"><div><small>MICROSOFT EXCEL / REPORTING</small><strong>Automated performance dashboard</strong></div><span>REFRESHABLE</span></div>
-      <div className="business-art-kpis"><div><small>PERFORMANCE</small><b>↑ Trend</b></div><div><small>REPORT STATUS</small><b>Updated</b></div><div><small>DATA SOURCE</small><b>Linked</b></div></div>
+      <div className="business-art-kpis"><div><small>REPORT TYPE</small><b>Excel</b></div><div><small>UPDATE FLOW</small><b>Refresh</b></div><div><small>OUTPUT</small><b>Dashboard</b></div></div>
       <div className="excel-report">
         <div className="excel-report-label">MONTHLY PERFORMANCE <span>ILLUSTRATIVE LAYOUT</span></div>
         <svg viewBox="0 0 500 130" preserveAspectRatio="none" aria-hidden="true"><path d="M0 105 C45 95 56 60 105 70 S165 88 208 48 S270 65 314 42 S370 55 410 26 S462 40 500 14" fill="none" stroke="currentColor" strokeWidth="3"/><path d="M0 105 C45 95 56 60 105 70 S165 88 208 48 S270 65 314 42 S370 55 410 26 S462 40 500 14 L500 130 L0 130Z" fill="currentColor" opacity=".10"/></svg>
