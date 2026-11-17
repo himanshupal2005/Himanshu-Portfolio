@@ -1,41 +1,66 @@
-# Himanshu Pal — High-End Portfolio
+# Himanshu Pal — Business, Data & Operations Portfolio
 
-A dark cinematic portfolio built with React, Vite, Motion for React, GSAP ScrollTrigger, and Lucide icons.
+A complete editorial redesign of the Himanshu Pal portfolio. The visual language is based on a warm business-journal direction using the requested three-colour identity:
+
+- Cream: `#F5DABF`
+- Deep green: `#0F3D3A`
+- Bordo: `#6C151E`
 
 ## Requirements
-- Node.js 20+ recommended
+
+- Node.js 20 or later
 - npm
 
 ## Run locally
+
 ```bash
 npm install
 npm run dev
 ```
 
 ## Production build
+
 ```bash
 npm run build
 npm run preview
 ```
 
-## Personalize before publishing
-- Add a current PDF résumé at `public/resume.pdf`.
-- Add real, sanitized project screenshots or short demo clips in `public/images/` and update `src/data.js`.
-- Verify all dates, metrics, role descriptions, and certifications before publishing.
-- The site intentionally describes Doc's Eye as a hackathon prototype, not a live medical product.
-- Check employer confidentiality before sharing insurance workflow details or screenshots.
-- Add a custom Open Graph image at `public/og-image.png` if desired.
+## Central site configuration
 
-## Deploy to Vercel
-Push this folder to a new GitHub repository, import that repository into Vercel, and use the default Vite settings:
+Edit `SITE_CONFIG` in `src/data.js` to update the email, social links, location or résumé link. The résumé CTA opens the supplied Google Drive file in a new tab; it does not create a local résumé or a substitute résumé page.
+
+```js
+resumeUrl: "https://drive.google.com/file/d/1LGmp8eAD19wX5hfiNI5YIeBvIW4M3v2s"
+```
+
+The Drive file must be shared with the intended audience (for public recruiting access, set General access to “Anyone with the link” as Viewer, if appropriate). Verify the link in a signed-out/private browser window before publishing.
+
+## Project evidence and accuracy
+
+- Supplied meal-service dashboard and payment screens are displayed as work evidence. Confirm whether the platform should be described as a concept, prototype or deployed system before publishing that status.
+- The supplied Excel dashboard image is displayed as visual evidence. The site does not infer formulas, refresh implementation details or time savings that were not supplied.
+- The Cars24 dashboard is described using the supported data-preparation and Power BI workflow. A dashboard screenshot and findings are still needed before adding detailed insights.
+- The Power Pivot relationship model is presented separately as a supporting data-modelling sample; it is not labelled as the Cars24 dashboard.
+- The motor-insurance turnaround and 20+ workflow statements are labelled as reported experience, not independent audited benchmarks. Do not add confidential customer, policy, insurer or employer information.
+- Diagrammatic process illustrations are labelled as process views, not product screenshots.
+
+## Images
+
+All submitted images are optimized WebP assets in `public/images/`. The portrait retains its transparent background.
+
+## Deployment
+
+Import the repository into Vercel or another static-site host using:
+
 - Build command: `npm run build`
 - Output directory: `dist`
 
+Vercel Analytics is retained from the existing project (`@vercel/analytics`). No backend, database or AI service is required by this portfolio.
 
-## Recent visual refinements
+## Before publishing
 
-- Replaced the abstract `FIG. 001` hero visual with `public/himanshu-portrait.webp`.
-- Added a GSAP ScrollTrigger-driven 3D tilt/scale effect to the portrait, with a reduced-motion fallback.
-- Increased the legibility of supporting text across the site.
-- Expanded the toolkit with analytics, development, automation, data-tool, and computer-vision skills.
-- Updated the experience heading to “Experience & growth.”
+1. Confirm meal platform status (concept / prototype / deployed).
+2. Add Cars24 dashboard and Power Query screenshots plus verified findings.
+3. Confirm the résumé is accessible to recruiters and still current.
+4. Verify dates, titles, awards and certifications against the latest résumé.
+5. Test desktop, tablet and mobile layouts and all external links.

@@ -1,62 +1,187 @@
+export const SITE_CONFIG = {
+  name: "Himanshu Pal",
+  email: "himanshuupal2005@gmail.com",
+  location: "Bhopal, India",
+  resumeUrl: "https://drive.google.com/file/d/1LGmp8eAD19wX5hfiNI5YIeBvIW4M3v2s",
+  github: "https://github.com/himanshupal2005/",
+  linkedin: "https://www.linkedin.com/in/himanshupal/",
+};
+
+export const navigation = [
+  ["work", "Selected work"],
+  ["approach", "How I think"],
+  ["experience", "Experience"],
+  ["about", "About"],
+];
+
 export const projects = [
   {
     id: "01",
-    category: "AI AUTOMATION",
-    title: "Insurance workflow harness",
-    summary: "Reusable automation workflows designed to streamline motor-insurance operations, from quotation preparation through approval-dependent steps.",
-    impact: "Reported quotation turnaround: ~15 min → under 1 min",
-    stack: ["Python", "JavaScript", "Workflow orchestration", "JSON"],
+    category: "WORKFLOW AUTOMATION",
+    title: "Motor insurance, made less manual.",
+    deck: "A reusable workflow harness for repetitive motor-insurance operations, with human approval kept in the loop.",
+    status: "Professional experience",
+    context: "Motor insurance operations involve a sequence of document checks, quotation preparation, customer and vehicle details, KYC, payment and policy-generation steps. Repeating these steps manually creates avoidable handling time.",
+    objective: "Build reusable automation workflows that make the process more consistent while retaining human checkpoints for decisions and approvals.",
+    role: "Artificial Intelligence Trainer · Agribook Tech Solutions And Allied Services Pvt. Ltd.",
+    method: ["Mapped recurring operational steps into reusable workflow patterns.", "Automated repeatable quotation and reporting tasks.", "Kept human approval checkpoints in the process where review was required."],
+    tools: ["Python", "JavaScript", "Workflow orchestration", "JSON"],
+    result: "The repository records 20+ reusable workflows and a reported quotation turnaround change from around 15 minutes to under one minute. Treat both figures as reported project experience, not an independently audited benchmark.",
     visual: "insurance",
-    featured: true,
-    details: [
-      "Designed reusable workflow patterns for a motor line of business.",
-      "Automated repetitive operational steps with human approval where required.",
-      "Structured workflows to support future line-of-business expansion."
-    ],
-    note: "Metrics are based on the user's reported experience. Do not publish confidential employer data or internal screenshots."
+    metric: "~15 min → under 1 min",
+    metricLabel: "Reported quotation turnaround",
   },
   {
     id: "02",
-    category: "ERP ENGINEERING",
-    title: "Inventory management ERP",
-    summary: "A traceable inventory workflow connecting vendors, warehouses, sites, and stock movements in one operational model.",
-    impact: "Centralized movement visibility",
-    stack: ["Google Apps Script", "JavaScript", "HTML", "Google Sheets"],
-    visual: "inventory",
-    details: [
-      "Designed transaction-oriented inventory movement records.",
-      "Connected warehouse and site workflows with movement traceability.",
-      "Focused on operational clarity and reliable stock history."
-    ]
+    category: "BUSINESS INTELLIGENCE",
+    title: "Cars24 dataset · Power BI dashboard.",
+    deck: "Taking a raw dataset through preparation and modelling to a report that makes patterns easier to inspect.",
+    status: "Dashboard evidence pending",
+    context: "A dataset is only useful when it is prepared consistently and presented in a form that helps a viewer ask better questions.",
+    objective: "Clean and transform the Cars24 dataset, prepare it for analysis, and develop a Power BI dashboard to explore patterns and decision-making opportunities.",
+    role: "Data preparation and dashboard development.",
+    method: ["Reviewed and cleaned source data.", "Used Power Query for transformation and preparation.", "Built the report view in Power BI."],
+    tools: ["Power BI", "Power Query", "Data cleaning", "Data transformation"],
+    result: "The work demonstrates a data-to-dashboard workflow. Specific findings and measured business impact have not been supplied, so no numerical insight is claimed here.",
+    visual: "pipeline",
+    metric: "Data → decisions",
+    metricLabel: "Project objective",
   },
   {
     id: "03",
-    category: "PRODUCT / POS",
-    title: "Meal service platform",
-    summary: "An operations platform concept for meal subscriptions, customers, payments, and daily delivery tracking.",
-    impact: "One view of daily operations",
-    stack: ["Google Sheets", "Apps Script", "Dashboards", "CRM"],
-    visual: "meal",
-    details: [
-      "Mapped customer, subscription, payment, and delivery records.",
-      "Designed daily operational dashboard metrics for lunch and dinner.",
-      "Explored automation to improve customer retention and delivery coordination."
-    ]
+    category: "REPORTING AUTOMATION",
+    title: "An Excel report that moves with the data.",
+    deck: "A reporting view designed to refresh when its underlying data is updated, reducing repetitive report rebuilding.",
+    status: "Dashboard screenshot supplied",
+    context: "Recurring reporting can become repetitive when a team has to rebuild the same charts and summary views each time its source data changes.",
+    objective: "Create an Excel dashboard where the reporting view can be refreshed as the underlying data is updated.",
+    role: "Dashboard design and reporting workflow.",
+    method: ["Organised the reporting view around summary indicators and charts.", "Designed the workbook for a repeatable refresh workflow.", "Kept the dashboard focused on a single view of sales performance."],
+    tools: ["Microsoft Excel", "Advanced Excel", "Reporting", "Charts"],
+    result: "The supplied dashboard image is shown as visual evidence. The exact formulas, refresh mechanism and time saved have not been specified, so they are not inferred.",
+    visual: "image",
+    image: "/images/excel-sales-dashboard.webp",
+    imageAlt: "Sales performance dashboard with summary indicators, charts and regional results",
+    imageCaption: "Supplied Excel dashboard view · displayed values are not used as portfolio impact claims",
+    metric: "Refresh-led reporting",
+    metricLabel: "Core workflow",
   },
   {
     id: "04",
-    category: "COMPUTER VISION",
-    title: "Touchless Cursor",
-    summary: "A hands-free desktop interaction prototype using webcam-based hand gestures to move and control the cursor.",
-    impact: "Gesture → cursor interaction",
-    stack: ["Python", "MediaPipe", "OpenCV", "PyAutoGUI"],
-    visual: "cursor",
-    details: [
-      "Used hand landmarks to recognize gestures.",
-      "Mapped gestures to cursor movement and actions.",
-      "Explored accessible, touch-free interaction patterns."
-    ]
+    category: "OPERATIONS SYSTEMS",
+    title: "Inventory movement, made traceable.",
+    deck: "An inventory-management ERP module connecting warehouse, vendor and site activity through transaction-based records.",
+    status: "ERP module work",
+    context: "Inventory is spread across locations and operational hand-offs. Without clear movement records, it is harder to understand where stock is, why it moved and who handled the transaction.",
+    objective: "Represent stock movement as traceable transactions across vendors, central and regional warehouses, repair centres, site stores and scrap handling.",
+    role: "Full Stack Developer · ECH Business Solution.",
+    method: ["Worked on transaction-oriented inventory movement records.", "Connected vendor, warehouse and site workflows.", "Focused on stock history, movement traceability and operational visibility."],
+    tools: ["Google Apps Script", "JavaScript", "HTML", "Google Sheets"],
+    result: "The work centres on a clearer operational model and stock-movement history. No deployment scale or quantified stock-accuracy improvement has been provided.",
+    visual: "inventory",
+    metric: "One movement ledger",
+    metricLabel: "Operating principle",
+  },
+  {
+    id: "05",
+    category: "BUSINESS OPERATIONS PLATFORM",
+    title: "A clearer operating view for a meal service.",
+    deck: "An operations-management platform covering customers, meal subscriptions, payments and daily deliveries.",
+    status: "Project status to confirm",
+    context: "A meal service needs to coordinate recurring subscriptions, payment records and daily lunch and dinner deliveries. These records are closely connected but represent different parts of the operation.",
+    objective: "Bring customer, subscription, payment and delivery information into a consistent operating view.",
+    role: "Product workflow and dashboard design.",
+    method: ["Structured customer and subscription records.", "Separated payment transactions from subscription and delivery records.", "Designed dashboard measures for active subscriptions, deliveries, lunch and dinner counts."],
+    tools: ["Google Sheets", "Google Apps Script", "Dashboards", "Supabase"],
+    result: "The supplied screens show a live dashboard view and payment-management view. The implementation status (concept, prototype or deployed system) should be confirmed before publication.",
+    visual: "gallery",
+    images: [
+      { src: "/images/meal-dashboard.webp", alt: "Meal service live dashboard with subscription and daily delivery summary", caption: "Live dashboard" },
+      { src: "/images/meal-payments.webp", alt: "Meal service payment management screen with payment records", caption: "Payment management" },
+    ],
+    metric: "Customers · subscriptions · deliveries",
+    metricLabel: "Connected operating areas",
+  },
+  {
+    id: "06",
+    category: "DATA MODELLING · SUPPORTING WORK",
+    title: "Power Pivot relationship model.",
+    deck: "A supporting data-modelling exercise showing fact tables connected to shared dimensions.",
+    status: "Supporting work sample",
+    context: "A useful analytical model separates descriptive dimensions from transactional fact records and makes their relationships explicit.",
+    objective: "Build and inspect a relational model across sales, returns, date, product, store and salesperson tables.",
+    role: "Data model setup and relationship inspection.",
+    method: ["Worked with fact tables for sales and returns.", "Connected product, store, date and salesperson dimensions.", "Inspected one-to-many relationships in Power Pivot diagram view."],
+    tools: ["Excel Power Pivot", "Data modelling", "Relationships"],
+    result: "This screenshot is kept as a separate Power Pivot work sample. It is not presented as the Cars24 dashboard or as evidence of a production model.",
+    visual: "image",
+    image: "/images/power-pivot-model.webp",
+    imageAlt: "Excel Power Pivot diagram view showing sales and returns fact tables connected to dimensions",
+    imageCaption: "Supplied Power Pivot relationship-model screenshot",
+    metric: "Fact + dimension model",
+    metricLabel: "Data structure",
+  },
+  {
+    id: "07",
+    category: "COMPUTER VISION · EXPERIMENT",
+    title: "Touchless Cursor.",
+    deck: "A hands-free desktop interaction prototype that maps webcam-based hand gestures to cursor movement and actions.",
+    status: "Prototype",
+    context: "A touch-free interaction experiment explores how camera input and hand landmarks can become practical desktop controls.",
+    objective: "Recognise selected hand gestures and translate them into cursor interactions.",
+    role: "Prototype development and gesture-to-action mapping.",
+    method: ["Used hand landmarks to recognise gestures.", "Mapped gesture states to cursor movement and actions.", "Explored touch-free desktop interaction patterns."],
+    tools: ["Python", "MediaPipe", "OpenCV", "PyAutoGUI"],
+    result: "The project is described as a prototype. The supplied repository does not provide a measured accuracy or accessibility outcome.",
+    visual: "gesture",
+    metric: "Gesture → cursor",
+    metricLabel: "Interaction concept",
   }
+];
+
+export const capabilities = [
+  {
+    number: "01",
+    title: "Analytics & decision support",
+    level: "Applied work",
+    description: "Prepare information, find patterns and make performance easier to understand.",
+    items: ["Advanced Excel", "Power BI", "Power Query", "SQL", "Data cleaning", "Exploratory analysis", "Data visualisation", "KPI reporting", "Business intelligence", "Looker Studio", "Statistics", "Dashboard automation"],
+  },
+  {
+    number: "02",
+    title: "Operations & process improvement",
+    level: "Applied work",
+    description: "Understand how work moves between people, systems and locations, then make the process clearer.",
+    items: ["Process mapping", "Workflow design", "Operational reporting", "Process automation", "Inventory workflows", "ERP workflows", "POS and CRM workflows", "Traceability", "Process documentation"],
+  },
+  {
+    number: "03",
+    title: "Marketing & consumer understanding",
+    level: "Developing",
+    description: "Build a foundation in how customers discover, evaluate and choose products or services.",
+    items: ["Marketing fundamentals", "Market research", "Customer journeys", "Consumer behaviour", "Social trends", "Content awareness", "Digital marketing fundamentals", "Human psychology in marketing"],
+  },
+  {
+    number: "04",
+    title: "Sales & commercial understanding",
+    level: "Developing",
+    description: "Use metrics and process visibility to understand pipeline health and commercial performance.",
+    items: ["Sales funnels", "Pipeline tracking", "Lead management", "CRM understanding", "Acquisition metrics", "Conversion analysis", "Sales reporting", "Revenue understanding"],
+  },
+  {
+    number: "05",
+    title: "Entrepreneurship & business thinking",
+    level: "Foundations",
+    description: "Develop the ability to connect an opportunity with a practical operating model and coordinated execution.",
+    items: ["Business models", "Opportunity identification", "Problem-solving", "Resource planning", "Business development awareness", "Cross-functional coordination", "Initiative and ownership", "Strategic thinking foundations"],
+  },
+  {
+    number: "06",
+    title: "Technology & automation",
+    level: "Applied toolkit",
+    description: "Use practical tools to prepare data, connect systems and automate repeatable work.",
+    items: ["Python", "JavaScript", "Google Apps Script", "SQL", "Google Sheets", "Supabase", "PostgreSQL", "n8n", "REST APIs", "Workflow automation", "AI harnesses", "Git and GitHub", "Jupyter Notebook"],
+  },
 ];
 
 export const experience = [
@@ -68,8 +193,8 @@ export const experience = [
     points: [
       "Built an enterprise AI harness with 20+ reusable automation workflows.",
       "Reportedly reduced quotation turnaround from around 15 minutes to under one minute.",
-      "Automated repetitive motor-insurance operational steps and reporting workflows."
-    ]
+      "Automated repetitive motor-insurance operational steps and reporting workflows.",
+    ],
   },
   {
     date: "OCT 2025 — JUL 2026",
@@ -77,10 +202,10 @@ export const experience = [
     company: "ECH Business Solution",
     type: "Internship · Remote",
     points: [
-      "Developed an inventory ERP module with Google Apps Script, HTML, JavaScript, and Google Sheets.",
-      "Connected vendors, warehouses, sites, and employee workflows with movement traceability.",
-      "Worked on transaction-based data models and operational automation."
-    ]
+      "Developed an inventory ERP module with Google Apps Script, HTML, JavaScript and Google Sheets.",
+      "Connected vendors, warehouses, sites and employee workflows with movement traceability.",
+      "Worked on transaction-based data models and operational automation.",
+    ],
   },
   {
     date: "APR 2025 — MAY 2025",
@@ -88,44 +213,11 @@ export const experience = [
     company: "Elevate Labs",
     type: "Internship · Remote",
     points: [
-      "Worked on data cleaning, exploratory analysis, SQL queries, and dashboard design.",
+      "Worked on data cleaning, exploratory analysis, SQL queries and dashboard design.",
       "Led a LinkedIn job-trend analysis using web scraping and market analytics.",
-      "Recognized as a Best Performer."
-    ]
-  }
-];
-
-export const skills = [
-  { name: "Python", group: "Analytics" },
-  { name: "Advanced Excel", group: "Analytics" },
-  { name: "Power BI", group: "Analytics" },
-  { name: "Data Cleaning", group: "Analytics" },
-  { name: "Exploratory Data Analysis", group: "Analytics" },
-  { name: "Data Visualization", group: "Analytics" },
-  { name: "Google Looker Studio", group: "Analytics" },
-  { name: "SQLite", group: "Analytics" },
-  { name: "JavaScript", group: "Development" },
-  { name: "HTML", group: "Development" },
-  { name: "CSS", group: "Development" },
-  { name: "Google Apps Script", group: "Development" },
-  { name: "Supabase", group: "Development" },
-  { name: "PostgreSQL", group: "Development" },
-  { name: "REST API Integration", group: "Development" },
-  { name: "Git & GitHub", group: "Development" },
-  { name: "VS Code", group: "Development" },
-  { name: "Jupyter Notebook", group: "Development" },
-  { name: "Workflow Design", group: "Automation" },
-  { name: "AI Harnesses", group: "Automation" },
-  { name: "Process Automation", group: "Automation" },
-  { name: "ERP Workflows", group: "Automation" },
-  { name: "POS & CRM Workflows", group: "Automation" },
-  { name: "n8n", group: "Automation" },
-  { name: "Data Modeling", group: "Automation" },
-  { name: "Power Query", group: "Data Tools" },
-  { name: "Microsoft 365", group: "Data Tools" },
-  { name: "Google Sheets", group: "Data Tools" },
-  { name: "Excel Reporting", group: "Data Tools" },
-  { name: "Dashboard Design", group: "Data Tools" }
+      "Recognized as a Best Performer.",
+    ],
+  },
 ];
 
 export const awards = [
@@ -134,7 +226,7 @@ export const awards = [
   { year: "2025", title: "Winner — Ideathon", detail: "Global Entrepreneurship Week · CII" },
   { year: "2025", title: "Certificate of Distinction", detail: "TERI Green Olympiad for Youth · 96% score" },
   { year: "2025", title: "Chancellor’s Scholarship Award", detail: "Jagran Lakecity University" },
-  { year: "2024", title: "Outstanding Talent", detail: "Deltron Technologies Pvt. Ltd." }
+  { year: "2024", title: "Outstanding Talent", detail: "Deltron Technologies Pvt. Ltd." },
 ];
 
 export const certifications = [
@@ -147,5 +239,5 @@ export const certifications = [
   "Kaggle — Intro to Programming",
   "Accenture Nordics — Consultant Job Simulation",
   "JPMorganChase — Quantitative Research Job Simulation",
-  "NAL Academy — Certificate Program in Mutual Funds"
+  "NAL Academy — Certificate Program in Mutual Funds",
 ];
