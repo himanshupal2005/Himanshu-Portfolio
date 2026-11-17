@@ -4,7 +4,7 @@ export const SITE_CONFIG = {
   location: "Bhopal, India",
   resumeUrl: "https://drive.google.com/file/d/1LGmp8eAD19wX5hfiNI5YIeBvIW4M3v2s",
   github: "https://github.com/himanshupal2005/",
-  linkedin: "https://www.linkedin.com/in/himanshupal/",
+  linkedin: "https://www.linkedin.com/in/himanshuupal/",
 };
 
 export const navigation = [
