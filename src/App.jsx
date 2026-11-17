@@ -95,6 +95,7 @@ function Navbar({ active, progress }) {
         <nav className="nav-links" aria-label="Main navigation">
           {links.map(([id, label]) => <a key={id} href={`#${id}`} className={active === id ? "active" : ""}>{label}</a>)}
         </nav>
+        <a href="/resume.pdf" className="nav-resume" target="_blank" rel="noreferrer">View résumé <Download size={14} /></a>
         <a href={`mailto:${EMAIL}`} className="nav-cta">Let’s talk <ArrowUpRight size={14} /></a>
         <button
           className="mobile-menu-button"
@@ -135,6 +136,7 @@ function Navbar({ active, progress }) {
                     <ArrowUpRight size={16} />
                   </a>
                 ))}
+                <a href="/resume.pdf" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}><span>View résumé</span><Download size={16} /></a>
                 <a href={`mailto:${EMAIL}`} onClick={() => setMenuOpen(false)} className="mobile-menu-email">
                   <span>Contact ({EMAIL})</span>
                   <Mail size={16} />
@@ -164,9 +166,9 @@ function HeroVisual() {
         <div className="portrait-gloss" />
       </div>
       <div className="portrait-tag portrait-tag-top"><span className="chip-pulse" /> AVAILABLE TO BUILD</div>
-      <div className="portrait-tag portrait-tag-left"><Code2 size={13} /> DEVELOPER <span>01</span></div>
+      <div className="portrait-tag portrait-tag-left"><BriefcaseBusiness size={13} /> BUSINESS <span>01</span></div>
       <div className="portrait-tag portrait-tag-right"><Database size={13} /> ANALYTICS <span>02</span></div>
-      <div className="portrait-tag portrait-tag-bottom"><Zap size={13} /> AUTOMATION <span>03</span></div>
+      <div className="portrait-tag portrait-tag-bottom"><Zap size={13} /> OPERATIONS <span>03</span></div>
     </div>
   );
 }
@@ -177,23 +179,23 @@ function Hero() {
     <section className="hero section-wrap" id="home">
       <div className="hero-copy">
         <motion.div className="eyebrow" initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          <span className="status-dot" /> AI AUTOMATION <span className="eyebrow-sep">/</span> DATA <span className="eyebrow-sep">/</span> SYSTEMS
+          <span className="status-dot" /> BUSINESS ANALYTICS <span className="eyebrow-sep">/</span> OPERATIONS <span className="eyebrow-sep">/</span> SYSTEMS
         </motion.div>
         <div className="hero-title-mask">
-          <motion.h1 initial={reduce ? false : { y: "105%" }} animate={{ y: 0 }} transition={{ duration: 0.85, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}>I build systems</motion.h1>
+          <motion.h1 initial={reduce ? false : { y: "105%" }} animate={{ y: 0 }} transition={{ duration: 0.85, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}>I connect business</motion.h1>
         </div>
         <div className="hero-title-mask">
-          <motion.h1 className="hero-title-accent" initial={reduce ? false : { y: "105%" }} animate={{ y: 0 }} transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}>that do more<span>.</span></motion.h1>
+          <motion.h1 className="hero-title-accent" initial={reduce ? false : { y: "105%" }} animate={{ y: 0 }} transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}>with data & systems<span>.</span></motion.h1>
         </div>
         <motion.p className="hero-description" initial={reduce ? false : { opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.6 }}>
-          I turn complex business workflows into useful software, automated processes, and data-driven decisions.
+          I combine business understanding, quantitative analysis and practical technology to improve decisions, operations and everyday workflows.
         </motion.p>
         <motion.div className="hero-actions" initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.85 }}>
           <a href="#work" className="button button-primary">Explore my work <ArrowDownRight size={16} /></a>
-          <a href={`mailto:${EMAIL}`} className="button button-quiet">Get in touch <ArrowUpRight size={16} /></a>
+          <a href="/resume.pdf" target="_blank" rel="noreferrer" className="button button-quiet">View résumé <Download size={16} /></a>
         </motion.div>
         <motion.div className="hero-footnote" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.05 }}>
-          <span>BASED IN BHOPAL, INDIA</span><span className="footnote-line" /><span>CURIOUS BY DEFAULT</span>
+          <span>BMS · BUSINESS ANALYTICS & FINANCE</span><span className="footnote-line" /><span>BASED IN BHOPAL, INDIA</span>
         </motion.div>
       </div>
       <motion.div className="hero-art" initial={reduce ? false : { opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.35 }}>
@@ -205,7 +207,7 @@ function Hero() {
 }
 
 function Ticker() {
-  const items = ["AI AUTOMATION", "DATA ANALYTICS", "ERP ENGINEERING", "PROCESS DESIGN", "BUSINESS INTELLIGENCE"];
+  const items = ["BUSINESS ANALYTICS", "OPERATIONS", "MARKETING INSIGHT", "SALES ANALYTICS", "AUTOMATION & SYSTEMS", "ENTREPRENEURSHIP"];
   return <div className="ticker" aria-label="Areas of focus"><div className="ticker-track">{[...items, ...items].map((item, i) => <span key={`${item}-${i}`}>{item}<Asterisk size={16} /></span>)}</div></div>;
 }
 
@@ -215,11 +217,11 @@ function About() {
       <SectionLabel number="01">A LITTLE ABOUT ME</SectionLabel>
       <div className="about-grid">
         <Reveal className="about-statement">
-          <h2>Business-minded.<br /><span>Systems-focused.</span><br />Built for impact.</h2>
+          <h2>Business-aware.<br /><span>Data-informed.</span><br />Built to improve.</h2>
         </Reveal>
         <Reveal className="about-body" delay={0.1}>
-          <p className="large-copy">I’m Himanshu — a Business Analytics & Finance student who likes working where <em>technology meets real operational problems.</em></p>
-          <p>I build practical tools: automation workflows that reduce repetitive work, ERP modules that make operations more traceable, and analytics that turn raw data into clearer decisions.</p>
+          <p className="large-copy">I’m Himanshu — a BMS student focused on Business Analytics & Finance, with a quantitative mindset and an interest in how <em>business decisions connect with real operations.</em></p>
+          <p>I work across analytics, operations and technology: building dashboards, automating recurring reports, mapping workflows and turning raw information into clearer decisions. I’m also developing my understanding of marketing, sales processes and entrepreneurship.</p>
           <div className="about-links">
             <a href={LINKEDIN} target="_blank" rel="noreferrer">More about me <ArrowUpRight size={15} /></a>
             <a href={GITHUB} target="_blank" rel="noreferrer">Explore GitHub <Github size={15} /></a>
@@ -227,11 +229,11 @@ function About() {
         </Reveal>
       </div>
       <div className="metrics-grid">
-        <Reveal className="metric-card"><span className="metric-index">01 / WORKFLOWS</span><strong>20<span>+</span></strong><p>Reusable automation workflows reported</p></Reveal>
-        <Reveal className="metric-card" delay={0.08}><span className="metric-index">02 / PROCESS</span><strong>15<span>m</span> <i>→</i> <b>&lt;1m</b></strong><p>Reported quotation turnaround improvement</p></Reveal>
+        <Reveal className="metric-card"><span className="metric-index">01 / AUTOMATION</span><strong>20<span>+</span></strong><p>Reusable operational workflows built</p></Reveal>
+        <Reveal className="metric-card" delay={0.08}><span className="metric-index">02 / TURNAROUND</span><strong>15<span>m</span> <i>→</i> <b>&lt;1m</b></strong><p>Reported quotation turnaround improvement</p></Reveal>
         <Reveal className="metric-card" delay={0.16}><span className="metric-index">03 / RECOGNITION</span><strong>06</strong><p>Selected awards and competition highlights</p></Reveal>
       </div>
-      <p className="metrics-note">Impact figures are based on my reported project experience. Details can vary by workflow and operating context.</p>
+      <p className="metrics-note">Impact figures are based on my reported project experience. Dashboard previews use illustrative values until original screenshots and verified findings are added.</p>
     </section>
   );
 }
@@ -273,6 +275,25 @@ function ProjectArtwork({ type }) {
       <div className="cursor-caption">REAL-TIME COMPUTER VISION</div>
     </div>
   );
+  if (type === "cars24") return (
+    <div className="artwork artwork-cars24">
+      <div className="business-art-header"><div><small>POWER BI / CARS24 DATASET</small><strong>Used-car market overview</strong></div><span>DEMO VIEW</span></div>
+      <div className="business-art-kpis"><div><small>LISTINGS</small><b>1,248</b></div><div><small>AVG. PRICE</small><b>₹ 6.8L</b></div><div><small>AVG. KM</small><b>42K</b></div></div>
+      <div className="cars24-chart"><div className="cars24-chart-title">PRICE DISTRIBUTION <span>ILLUSTRATIVE VALUES</span></div><div className="cars24-bars">{[42,68,54,84,62,93,73,48,66,80].map((v,i)=><i key={i} style={{height:v+"%"}} />)}</div></div>
+      <div className="cars24-footer"><span>POWER QUERY · DATA CLEANING</span><span>POWER BI REPORT</span></div>
+    </div>
+  );
+  if (type === "excel") return (
+    <div className="artwork artwork-excel">
+      <div className="business-art-header"><div><small>MICROSOFT EXCEL / REPORTING</small><strong>Automated performance dashboard</strong></div><span>REFRESHABLE</span></div>
+      <div className="business-art-kpis"><div><small>PERFORMANCE</small><b>↑ Trend</b></div><div><small>REPORT STATUS</small><b>Updated</b></div><div><small>DATA SOURCE</small><b>Linked</b></div></div>
+      <div className="excel-report">
+        <div className="excel-report-label">MONTHLY PERFORMANCE <span>ILLUSTRATIVE LAYOUT</span></div>
+        <svg viewBox="0 0 500 130" preserveAspectRatio="none" aria-hidden="true"><path d="M0 105 C45 95 56 60 105 70 S165 88 208 48 S270 65 314 42 S370 55 410 26 S462 40 500 14" fill="none" stroke="currentColor" strokeWidth="3"/><path d="M0 105 C45 95 56 60 105 70 S165 88 208 48 S270 65 314 42 S370 55 410 26 S462 40 500 14 L500 130 L0 130Z" fill="currentColor" opacity=".10"/></svg>
+      </div>
+      <div className="cars24-footer"><span>DATA UPDATE</span><span>REFRESH DASHBOARD</span><span>EXCEL REPORTING</span></div>
+    </div>
+  );
   if (type === "analytics") return (
     <div className="artwork artwork-analytics">
       <div className="analytics-heading"><span>JOB MARKET SIGNALS</span><BarChart3 size={16}/></div>
@@ -309,7 +330,7 @@ function ProjectCard({ project, index, onOpen }) {
 function Projects() {
   const [filter, setFilter] = useState("All");
   const [selected, setSelected] = useState(null);
-  const categories = ["All", "AI AUTOMATION", "ERP ENGINEERING", "PRODUCT / POS", "COMPUTER VISION"];
+  const categories = ["All", "BUSINESS ANALYTICS", "AI AUTOMATION", "ERP ENGINEERING", "PRODUCT / POS", "COMPUTER VISION"];
   const filtered = filter === "All" ? projects : projects.filter(p => p.category === filter);
   useEffect(() => {
     if (!selected) return;
@@ -321,10 +342,10 @@ function Projects() {
   }, [selected]);
   return (
     <section className="section-wrap projects-section" id="work">
-      <SectionLabel number="02">SELECTED WORK</SectionLabel>
+      <SectionLabel number="02">BUSINESS IN PRACTICE</SectionLabel>
       <div className="section-heading-row">
-        <Reveal><h2>Proof of <span>work.</span></h2></Reveal>
-        <Reveal delay={0.1}><p>Projects at the intersection of business problems, thoughtful engineering, and practical outcomes.</p></Reveal>
+        <Reveal><h2>From data to <span>decisions.</span></h2></Reveal>
+        <Reveal delay={0.1}><p>Dashboards, automation and operating systems built to make business information easier to understand and act on.</p></Reveal>
       </div>
       <div className="filter-row" role="group" aria-label="Filter projects">
         {categories.map(c => <button key={c} className={filter === c ? "filter-chip active" : "filter-chip"} onClick={() => setFilter(c)}>{c === "All" ? "ALL PROJECTS" : c}</button>)}
@@ -367,18 +388,20 @@ function Capabilities() {
   const visible = group === "All" ? skills : skills.filter(s => s.group === group);
   return (
     <section className="section-wrap capabilities-section" id="capabilities">
-      <SectionLabel number="03">TOOLKIT & APPROACH</SectionLabel>
+      <SectionLabel number="03">HOW I APPROACH A BUSINESS</SectionLabel>
       <div className="section-heading-row">
-        <Reveal><h2>Different tools.<br /><span>One objective.</span></h2></Reveal>
-        <Reveal delay={0.1}><p>I choose tools around the problem: automate the repeatable, visualize the important, and make the workflow easier to understand.</p></Reveal>
+        <Reveal><h2>Understand the business.<br /><span>Improve the system.</span></h2></Reveal>
+        <Reveal delay={0.1}><p>I look at the full picture: what customers need, how work gets done, what the numbers say and where a process can improve.</p></Reveal>
       </div>
       <div className="capabilities-grid">
-        <CapabilityCard icon={Cpu} number="01" title="AI & automation" body="Reusable workflows and practical automation designed to reduce manual operations." tags={["Workflow design", "AI harnesses", "Process automation"]}/>
-        <CapabilityCard icon={BarChart3} number="02" title="Data & insight" body="Transforming raw data into structured analysis, dashboards, and decisions." tags={["Python", "Power BI", "Data Modeling"]}/>
-        <CapabilityCard icon={Database} number="03" title="ERP & systems" body="Operational data models and traceable workflows for real business processes." tags={["ERP", "Apps Script", "Data models"]}/>
+        <CapabilityCard icon={BarChart3} number="01" title="Analytics & decisions" body="Using Excel, Power BI and statistics to organise information, monitor performance and support business decisions." tags={["Dashboards", "KPI analysis", "Statistics"]}/>
+        <CapabilityCard icon={Database} number="02" title="Operations & process" body="Understanding how work moves across people, systems and departments, then improving visibility and repeatable execution." tags={["Process mapping", "Reporting", "ERP workflows"]}/>
+        <CapabilityCard icon={BriefcaseBusiness} number="03" title="Marketing & sales insight" body="Developing a practical foundation in market research, customer journeys, sales funnels and pipeline metrics." tags={["Marketing basics", "Sales analytics", "CRM thinking"]}/>
+        <CapabilityCard icon={Cpu} number="04" title="Entrepreneurial thinking" body="Looking at problems through a founder’s lens: customer value, business models, resources, priorities and sustainable execution." tags={["Problem framing", "Business models", "Initiative"]}/>
       </div>
+      <p className="capability-note">My strongest hands-on evidence is in analytics, reporting and process automation. Marketing, sales and entrepreneurship are developing business capabilities that I am actively building through study and practical work.</p>
       <div className="skills-block">
-        <div className="skills-heading"><div><span className="mini-label">TOOLS I WORK WITH</span><h3>My toolkit</h3></div><div className="skill-filters">{groups.map(g => <button key={g} onClick={() => setGroup(g)} className={group === g ? "active" : ""}>{g}</button>)}</div></div>
+        <div className="skills-heading"><div><span className="mini-label">CAPABILITIES I AM BUILDING</span><h3>My toolkit & business skills</h3></div><div className="skill-filters">{groups.map(g => <button key={g} onClick={() => setGroup(g)} className={group === g ? "active" : ""}>{g}</button>)}</div></div>
         <motion.div layout className="skills-cloud">{visible.map((s) => <motion.span layout key={s.name} initial={{ opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="skill-pill">{s.name}<ArrowUpRight size={12} /></motion.span>)}</motion.div>
       </div>
     </section>
@@ -390,8 +413,8 @@ function Experience() {
     <section className="section-wrap experience-section" id="experience">
       <SectionLabel number="04">THE JOURNEY SO FAR</SectionLabel>
       <div className="section-heading-row">
-        <Reveal><h2>Experience &<br /><span>growth.</span></h2></Reveal>
-        <Reveal delay={0.1}><p>Learning by building, working across business processes, software, and analytics.</p></Reveal>
+        <Reveal><h2>Where I’ve made<br /><span>work better.</span></h2></Reveal>
+        <Reveal delay={0.1}><p>Hands-on experience across automation, business operations, inventory systems and data analysis.</p></Reveal>
       </div>
       <div className="experience-layout">
         <div className="experience-intro"><span className="experience-stamp"><BriefcaseBusiness size={19}/></span><p>Selected professional experience</p><span className="mono-muted">2025 — 2026</span></div>
@@ -416,8 +439,8 @@ function Recognition() {
     <section className="section-wrap recognition-section" id="recognition">
       <SectionLabel number="05">RECOGNITION & LEARNING</SectionLabel>
       <div className="section-heading-row">
-        <Reveal><h2>Earned, not<br /><span>just claimed.</span></h2></Reveal>
-        <Reveal delay={0.1}><p>Competitions, recognition, and structured learning that have shaped how I approach problems.</p></Reveal>
+        <Reveal><h2>Curiosity backed<br /><span>by action.</span></h2></Reveal>
+        <Reveal delay={0.1}><p>Competitions, academic recognition and structured learning across business, analytics and technology.</p></Reveal>
       </div>
       <div className="recognition-grid">
         <div className="awards-list">{awards.map((a, i) => <Reveal key={a.title} delay={i * 0.035} className="award-row"><span className="award-year">{a.year}</span><div><h3>{a.title}</h3><p>{a.detail}</p></div><ArrowUpRight size={15}/></Reveal>)}</div>
@@ -443,9 +466,9 @@ function Contact() {
       <div className="contact-grid" />
       <div className="section-wrap contact-inner">
         <SectionLabel number="06">YOUR MOVE</SectionLabel>
-        <Reveal><p className="contact-kicker">HAVE A GOOD PROBLEM?</p><h2>Let’s build<br /><span>something useful.</span></h2></Reveal>
+        <Reveal><p className="contact-kicker">HAVE A BUSINESS CHALLENGE?</p><h2>Let’s make<br /><span>work better.</span></h2></Reveal>
         <div className="contact-bottom">
-          <p>I’m interested in thoughtful teams, meaningful projects, and opportunities to turn messy workflows into better systems.</p>
+          <p>I’m interested in teams and founders who want to understand their business better, improve operations and make more informed decisions.</p>
           <div className="contact-actions">
             <a className="button button-primary" href={`mailto:${EMAIL}`} onClick={handleEmailClick}>
               {copied ? <Check size={16}/> : <Mail size={16}/>} {copied ? "Email copied & opening..." : EMAIL}
@@ -459,7 +482,7 @@ function Contact() {
 }
 
 function Footer() {
-  return <footer className="footer section-wrap"><a href="#home" className="footer-brand"><span className="brand-mark">HP</span><span>HIMANSHU PAL<span className="brand-dot">.</span></span></a><span className="footer-credit">DESIGNED TO THINK IN SYSTEMS.</span><div className="footer-links"><a href={GITHUB} target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={17}/></a><a href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17}/></a><a href={`mailto:${EMAIL}`} aria-label="Email"><Mail size={17}/></a><a href="#home" aria-label="Back to top"><ArrowUpRight size={17}/></a></div><span className="footer-copy">© {new Date().getFullYear()} HIMANSHU PAL</span></footer>;
+  return <footer className="footer section-wrap"><a href="#home" className="footer-brand"><span className="brand-mark">HP</span><span>HIMANSHU PAL<span className="brand-dot">.</span></span></a><span className="footer-credit">BUSINESS · DATA · OPERATIONS · SYSTEMS</span><div className="footer-links"><a href={GITHUB} target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={17}/></a><a href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17}/></a><a href={`mailto:${EMAIL}`} aria-label="Email"><Mail size={17}/></a><a href="#home" aria-label="Back to top"><ArrowUpRight size={17}/></a></div><span className="footer-copy">© {new Date().getFullYear()} HIMANSHU PAL</span></footer>;
 }
 
 function ScrollEffects() {
