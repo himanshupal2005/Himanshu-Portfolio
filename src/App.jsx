@@ -19,7 +19,7 @@ function Arrow({ diagonal = false }) {
 }
 
 function Mark() {
-  return <span className="mark" aria-hidden="true">HP<span>.</span></span>;
+  return <span className="mark" aria-hidden="true">H</span>;
 }
 
 function SectionHeading({ number, eyebrow, title, intro }) {
@@ -69,10 +69,7 @@ function Hero() {
   return (
     <section className="hero section-shell" id="top">
       <div className="hero-copy">
-        <div className="eyebrow"><span className="eyebrow-dot" /> BUSINESS ANALYTICS / FINANCE / OPERATIONS</div>
-        <p className="hero-pretitle">A practical mind for</p>
-        <h1>Better<br /><em>business.</em></h1>
-        <p className="hero-strap">Business-minded. Data-informed. Built to improve.</p>
+        <div className="hero-positioning">Connecting Business, Data and Technology to make work better</div>
         <p className="hero-summary">I’m Himanshu Pal, a BMS student exploring how data, technology and a clear understanding of business operations can make everyday work better.</p>
         <div className="hero-actions">
           <a className="button button-dark" href="#work">Explore selected work <Arrow diagonal /></a>
@@ -83,8 +80,6 @@ function Hero() {
       </div>
       <div className="hero-portrait" aria-label="Portrait of Himanshu Pal">
         <div className="portrait-disc" />
-        <div className="portrait-rule portrait-rule-one" />
-        <div className="portrait-rule portrait-rule-two" />
         <img src="/images/profile-cutout.webp" alt="Himanshu Pal in a charcoal suit" fetchPriority="high" />
         <span className="portrait-index">FIG. 01 <b>—</b> HIMANSHU PAL</span>
         <span className="portrait-side-note">DATA · SYSTEMS · PEOPLE</span>
@@ -111,7 +106,7 @@ function About() {
           <div><span>03</span><h3>Improve the way it runs.</h3><p>Design workflows that reduce repeat effort without losing human judgement.</p></div>
         </div>
       </div>
-      <div className="education-note"><span className="education-monogram">BMS</span><div><b>Bachelor of Management Studies</b><span>Jagran Lakecity University · Bhopal · Business Analytics & Finance</span></div><small>5TH SEMESTER</small></div>
+      <div className="education-note"><span className="education-monogram">BMS</span><div><b>Bachelor of Management Studies</b><span>Jagran Lakecity University · Bhopal · Business Analytics & Finance</span></div><small>August 2024 – Present</small></div>
     </section>
   );
 }
@@ -225,7 +220,7 @@ function Approach() {
 function Experience() {
   return (
     <section className="experience-section section-shell" id="experience">
-      <SectionHeading number="04" eyebrow="EXPERIENCE / LEARNING THROUGH DELIVERY" title={<>Where I’ve<br /><em>put ideas to work.</em></>} intro="Roles across analytics, ERP workflows and operational automation—each adding a different view of how organisations work." />
+      <SectionHeading number="04" eyebrow="WHERE I’VE PUT IDEAS TO WORK" title={<>Experience &<br /><em>learning.</em></>} intro="Roles across analytics, ERP workflows and operational automation—each adding a different view of how organisations work." />
       <div className="experience-list">
         {experience.map((job, i) => <article className="experience-item" key={job.company}>
           <div className="experience-date"><span>{job.date}</span><b>0{i + 1}</b></div>

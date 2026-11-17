@@ -39,9 +39,9 @@ The Drive file must be shared with the intended audience (for public recruiting 
 
 - Supplied meal-service dashboard and payment screens are displayed as work evidence. Confirm whether the platform should be described as a concept, prototype or deployed system before publishing that status.
 - The supplied Excel dashboard image is displayed as visual evidence. The site does not infer formulas, refresh implementation details or time savings that were not supplied.
-- The Cars24 dashboard is described using the supported data-preparation and Power BI workflow. A dashboard screenshot and findings are still needed before adding detailed insights.
+- The supplied Cars24 dashboard screenshot is displayed as visual evidence; no unverified business impact is claimed.
 - The Power Pivot relationship model is presented separately as a supporting data-modelling sample; it is not labelled as the Cars24 dashboard.
-- The motor-insurance turnaround and 20+ workflow statements are labelled as reported experience, not independent audited benchmarks. Do not add confidential customer, policy, insurer or employer information.
+- The supplied motor-insurance Harness overview is displayed only after obscuring credential and model-configuration regions. The motor-insurance turnaround and 20+ workflow statements remain labelled as reported experience, not independent audited benchmarks. Do not add confidential customer, policy, insurer or employer information.
 - Diagrammatic process illustrations are labelled as process views, not product screenshots.
 
 ## Images
