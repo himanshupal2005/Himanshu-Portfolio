@@ -2388,3 +2388,44 @@ main, .footer, .navbar, .reading-progress {
     transform: translate(-50%, -50%) !important;
   }
 }
+
+
+/* Warm editorial identity: cream canvas, forest-green structure, bordo accents */
+body::before { opacity: .035; }
+.ambient-one, .ambient-two { background: #6C151E; opacity: .035; }
+.preloader { background: #F5DABF; color: #0F3D3A; }
+.preloader-track { background: rgba(15,61,58,.16); }
+.preloader-track span, .reading-progress span { background: #6C151E; }
+.navbar { background: rgba(245,218,191,.92); border-bottom-color: rgba(15,61,58,.14); }
+.brand-mark { border-color: #6C151E; color: #6C151E; }
+.brand-dot, .hero-title-accent, .section-heading-row h2 span,
+.about-statement h2 span, .experience-company, .metric-card strong span { color: #6C151E; }
+.status-dot, .chip-pulse { background: #6C151E; box-shadow: 0 0 0 4px rgba(108,21,30,.10); }
+.button-primary { background: #0F3D3A; color: #F5DABF; border-color: #0F3D3A; }
+.button-primary:hover { background: #6C151E; border-color: #6C151E; }
+.button-quiet:hover, .nav-cta:hover, .filter-chip:hover,
+.skill-filters button:hover { border-color: #6C151E; color: #6C151E; }
+.filter-chip.active, .skill-filters button.active { background: #0F3D3A; color: #F5DABF; border-color: #0F3D3A; }
+.ticker { background: rgba(15,61,58,.045); border-color: rgba(15,61,58,.15); }
+.ticker-track span svg, .award-row > svg, .certifications-card li svg,
+.education-icon, .text-button { color: #6C151E; }
+.project-visual-button, .artwork { background: #EED0B2; }
+.project-card { background: rgba(248,228,208,.58); border-color: rgba(15,61,58,.20); }
+.contact-section { background: #0F3D3A; color: #F5DABF; border-color: rgba(15,61,58,.2); }
+.contact-section .section-label, .contact-section .contact-kicker,
+.contact-section .contact-bottom > p { color: rgba(245,218,191,.72); }
+.contact-inner h2 span { color: #E5B2A7; }
+.contact-section .button-primary { background: #F5DABF; color: #0F3D3A; border-color: #F5DABF; }
+.contact-section .button-quiet { border-color: rgba(245,218,191,.34); color: #F5DABF; }
+.footer { border-top-color: rgba(15,61,58,.18); }
+::selection { color: #F5DABF; background: #6C151E; }
+
+/* Neutralize remaining hard-coded dark surfaces from the previous theme */
+.mobile-menu, .project-modal { background: #F8E4D0; color: #0F3D3A; }
+.mobile-menu-backdrop, .modal-backdrop { background: rgba(15,61,58,.28); }
+.mobile-menu-links a, .mobile-menu-footer a, .nav-links a { color: #49645D; }
+.experience-content ul, .certifications-card li, .award-row p,
+.education-strip p, .certifications-heading p, .project-card p { color: #49645D; }
+.experience-date, .experience-type, .award-year, .footer-credit,
+.footer-copy, .mono-muted { color: #65746B; }
+.contact-grid { opacity: .12; background-image: linear-gradient(rgba(245,218,191,.10) 1px, transparent 1px), linear-gradient(90deg, rgba(245,218,191,.10) 1px, transparent 1px); }
