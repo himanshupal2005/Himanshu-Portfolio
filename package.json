@@ -1,7 +1,7 @@
 {
-  "name": "himanshu-high-end-portfolio",
+  "name": "himanshu-portfolio-editorial",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,17 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@gsap/react": "^2.1.2",
     "@vercel/analytics": "^2.0.1",
-    "gsap": "^3.13.0",
-    "lucide-react": "^0.468.0",
-    "motion": "^12.23.12",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.7.0",
-    "playwright": "^1.64.1",
     "vite": "^6.3.5"
   }
 }
