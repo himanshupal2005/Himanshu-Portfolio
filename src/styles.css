@@ -1,5 +1,5 @@
 :root {
-  --cream: #F5DABF;
+  --cream: #f6e5d5;
   --green: #0F3D3A;
   --bordo: #6C151E;
   --green-62: rgba(15, 61, 58, .62);
@@ -9,7 +9,7 @@
   --green-06: rgba(15, 61, 58, .06);
   --bordo-22: rgba(108, 21, 30, .22);
   --bordo-10: rgba(108, 21, 30, .10);
-  --paper: #F5DABF;
+  --paper: #f6e5d5;
   --serif: "DM Serif Display", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
   --mono: "DM Mono", monospace;
@@ -57,7 +57,7 @@ main, .site-header, .site-footer { position: relative; z-index: 1; }
   align-items: center;
   justify-content: space-between;
   gap: 28px;
-  background: rgba(245, 218, 191, .94);
+  background: rgba(246, 228, 210, 0.94);
   border-bottom: 1px solid var(--green-22);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
